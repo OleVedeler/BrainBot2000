@@ -40,7 +40,6 @@ namespace Microsoft.Bot.Sample.ProactiveBot
                     MicrosoftAppCredentials.TrustServiceUrl(messageactivity.ServiceUrl);
                 }
                 var triggerReply = messageactivity.CreateReply();
-                triggerReply.Text = $"This is coming back from the trigger! {message.Text}";
                 await client.Conversations.ReplyToActivityAsync(triggerReply);
             }
             else
