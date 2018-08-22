@@ -13,13 +13,13 @@ namespace ProactiveBot.Services
 
         public WordGenerator()
         {
-            var Words = new List<string>();
-            Words.Add("Iot");
-            Words.Add("Bildør");
-            Words.Add("Machine Learning");
-            Words.Add("AR");
-            Words.Add("Vacuum Cleaner");
-            Words.Add("Small Boat");
+            _words = new List<string>();
+            _words.Add("Iot");
+            _words.Add("Bildør");
+            _words.Add("Machine Learning");
+            _words.Add("AR");
+            _words.Add("Vacuum Cleaner");
+            _words.Add("Small Boat");
         }
 
         public string NewWord()
