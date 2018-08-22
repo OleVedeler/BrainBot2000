@@ -25,7 +25,8 @@ namespace Microsoft.Bot.Sample.ProactiveBot
             // check if activity is of type message
             if (activity.GetActivityType() == ActivityTypes.Message)
             {
-                await Conversation.SendAsync(activity, () => new ProactiveDialog());
+                await Conversation.SendAsync(activity, () => new BrainStormDialog());
+                //await Conversation.SendAsync(activity, () => new ProactiveDialog());
             }
             else if (activity.Type == ActivityTypes.Event)
             {
