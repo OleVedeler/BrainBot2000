@@ -8,7 +8,7 @@ namespace ProactiveBot.Services
 {
     public class WordGenerator : IWordGenerator
     {
-        private List<string> Words;
+        private List<string> _words;
         Random rand = new Random();
 
         public WordGenerator()
@@ -24,7 +24,7 @@ namespace ProactiveBot.Services
 
         public string NewWord()
         {
-            return Words[rand.Next(Words.Count)];
+            return _words[rand.Next(_words.Count - 1)];
         }
 
         public List<string> NewWords(int numberOfWords)
